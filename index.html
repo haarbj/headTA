@@ -9,7 +9,7 @@
                 var numTAs = parseInt(document.getElementById("numTAs").value);
 
                 var studentsPerTA = Math.floor(numStudents / (numTAs - 0.5));
-                var headTA = Math.floor(studentsPerTA / 2);
+                var headTA = Math.ceiling(studentsPerTA / 2);
                 var remainder = (numStudents - headTA) % (numTAs - 1);
                 studentsPerTA = Math.floor((numStudents - headTA) / (numTAs - 1));
 
