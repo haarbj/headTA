@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student and TA Assignment</title>
+    <script>
+        function calculateAssignment() {
+            var numStudents = parseInt(document.getElementById("numStudents").value);
+            var numTAs = parseInt(document.getElementById("numTAs").value);
+
+            var studentsPerTA = Math.floor(numStudents / (numTAs - 0.5));
+            var headTA = studentsPerTA / 2;
+            var remainder = (numStudents - headTA) % (numTAs - 1);
+            studentsPerTA = Math.floor((numStudents - headTA) / (numTAs - 1));
+
+            document.getElementById("result").innerHTML = "The first " + remainder + " TAs should be assigned " + (studentsPerTA+1) + " students, and the rest should be assigned " + studentsPerTA + " students. You, as the head TA should be assigned " + headTA + " students.";
+        }
+    </script>
+</head>
+<body>
+    <h1>Student and TA Assignment</h1>
+    <form>
+        <label for="numStudents">Number of Students:</label>
+        <input type="number" id="numStudents"><br><br>
+        <label for="numTAs">Number of TAs:</label>
+        <input type="number" id="numTAs"><br><br>
+        <button type="button" onclick="calculateAssignment()">Calculate</button><br><br>
+    </form>
+    <div id="result"></div>
+</body>
+</html>
