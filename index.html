@@ -12,7 +12,7 @@
             var remainder = (numStudents - headTA) % (numTAs - 1);
             studentsPerTA = Math.floor((numStudents - headTA) / (numTAs - 1));
 
-            document.getElementById("result").innerHTML = "The first " + remainder + " TAs should be assigned " + (studentsPerTA+1) + " students, and the rest should be assigned " + studentsPerTA + " students. You, as the head TA should be assigned " + headTA + " students.";
+            document.getElementById("result").innerHTML = "The first " + remainder + " TAs should be assigned " + (studentsPerTA+1) + " students, and the rest should be assigned " + studentsPerTA + " students. \nYou, as the head TA should be assigned " + headTA + " students.";
         }
     </script>
 </head>
